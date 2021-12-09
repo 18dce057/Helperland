@@ -1,0 +1,311 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,500;1,900&display=swap");
+
+* {
+  font-family: "Roboto", sans-serif;
+}
+
+/*navigation bar header home page*/
+
+#navbar-home-page {
+  background-image: url("back.png");
+  color: #ffffff;
+  padding-top: 100px;
+}
+
+.navbar-nav li a {
+  color: #ffffff !important;
+  font-size: 17px;
+}
+
+.navbar-nav li a > button {
+  border-radius: 20px;
+  padding: 0 10px;
+  padding: 6px 20px;
+}
+
+.navbar-button {
+  background-color: rgba(41, 98, 109, 0.8) !important;
+}
+
+.navbar-button:hover {
+  color: white !important;
+  background-color: rgba(41, 98, 109, 1) !important;
+}
+
+.navbar-nav li a:hover {
+  color: rgb(154, 164, 190) !important;
+}
+
+#navw {
+  width: 100%;
+}
+
+.dropdown-item:hover {
+  background-color: cornflowerblue !important;
+}
+
+.span-drop {
+  color: #525252 !important;
+}
+
+/*list after header home page*/
+#list-home-page-middle {
+  margin-top: 179px;
+  margin-left: 55px;
+}
+
+.container {
+  padding: 0 5%;
+}
+
+.title-heading {
+  font-size: 40px;
+  font-weight: bold;
+  color: var(--font-color2);
+}
+
+.inner-content {
+  font-size: 16px;
+  color: var(--font-color1);
+}
+
+/*book a cleaner center button home page*/
+#book-cleaner-button {
+  border-radius: 27px;
+  font-size: 18px;
+  background-color: rgba(0, 96, 114, 0.6);
+  opacity: 0.8;
+}
+
+#book-cleaner-button:hover {
+  background-color: rgba(0, 96, 114, 1);
+  color: white !important;
+}
+
+/*steps home page*/
+#steps-home-page-middle {
+  margin-top: 120px;
+  flex-wrap: wrap;
+}
+
+/*why helperland home page*/
+#why-helperland-home-page .why-helperland-heading-in {
+  color: var(--font-color1);
+}
+
+#why-helperland-home-page image {
+  min-width: 230px;
+  min-height: 230px;
+}
+
+/* Why helperland (after) home page */
+#why-helperland-after-heading {
+  color: #4f4f4f;
+  font-size: 30px;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+}
+
+#why-helperland-after-text {
+  color: #4f4f4f;
+  font-size: 18px;
+}
+
+/*What our customer says home page*/
+.read-post {
+  font-size: 18px;
+  color: #4f4f4f;
+  font-family: "Roboto", sans-serif;
+  text-decoration: none;
+}
+
+.read-post:hover {
+  color: #4f4f4f;
+}
+
+.what-our-customer-say-customer-name-home-page {
+  font-size: 19.92px;
+  color: #4f4f4f;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+}
+
+.what-our-customer-say-title-home-page {
+  font-size: 40px;
+  font-weight: bold;
+  font-family: "Roboto", sans-serif;
+  color: #4f4f4f;
+}
+
+.what-our-customer-say-customer-city-home-page {
+  font-size: 13.95px;
+  color: #8e8e8e;
+  font-family: "Roboto", sans-serif;
+}
+
+.customer-card-body {
+  padding-left: 40px !important;
+  padding-top: 40px !important;
+  padding-bottom: 30px !important;
+  padding-right: 20px !important;
+}
+
+.what-our-customer-say-customer-text-home-page {
+  font-size: 16px;
+  color: #565656;
+  font-family: "Roboto", sans-serif;
+}
+
+.customer-card {
+  background-color: #e4ebf0;
+  border-left: 4px solid #006072 !important;
+  border-right: none !important;
+  border-top: none !important;
+  border-bottom: none !important;
+  position: relative;
+}
+
+.what-our-customer-say-message-img {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
+
+/*newsletter home page */
+#newsletter-home-page-common {
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  color: #353548;
+  font-weight: 500;
+}
+
+#email-submit-button {
+  background-color: #ff7b6d;
+  color: #ffffff;
+  font-size: 14px;
+  font-family: "Roboto", sans-serif;
+  border-radius: 50px;
+  height: 40px;
+  width: 88px;
+}
+
+#inputEmail {
+  border: 1px solid #565656;
+  border-radius: 50px;
+  height: 40px;
+  width: 233px;
+}
+
+input::-webkit-input-placeholder {
+  font-size: 14px;
+  color: #565656;
+  font-family: "Roboto", sans-serif;
+}
+
+/*footer home page*/
+
+#home-page-footer-common {
+  background-color: #111111;
+  padding: 25px 0 5px;
+  margin-bottom: 0;
+  bottom: 0;
+}
+
+#home-page-footer-list-common {
+  flex-wrap: wrap;
+  list-style-type: none;
+  font-family: "Roboto", sans-serif;
+  color: #f1f1f1;
+  font-size: 14px;
+  padding: 0px 40px;
+}
+
+#home-page-footer-list-common li {
+  padding: 0 10px;
+}
+
+#home-page-footer-social-media-common div {
+  padding: 0 10px;
+}
+
+/*privacy policy home page */
+.privacy {
+  background-color: #292929;
+  height: 64px;
+  position: fixed;
+}
+
+.privacy p {
+  font-size: 14px;
+  color: #f1f1f1;
+  margin: 0 130px 0 30px;
+}
+
+.policy-txt {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-end {
+  text-decoration: none;
+  color: #4f4f4f;
+  background-color: #eed507;
+  border-radius: 20px;
+  border: 0px solid transparent;
+  padding: 6px 20px;
+  height: 40px;
+  width: 100px;
+}
+
+.btn-end a {
+  text-decoration: none;
+  color: #4f4f4f;
+  font-size: 16px;
+}
+
+.policy {
+  text-decoration: none;
+  color: #6eabef;
+}
+
+@media (max-width: 992px) {
+  .navbar-collapse {
+    background-color: rgb(41, 41, 41);
+    text-align: left !important;
+    padding-left: 20px;
+  }
+
+  #steps-home-page-middle {
+    flex-direction: column;
+  }
+
+  #steps-home-page-middle > img {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  #why-helperland-after-img img {
+    width: 202px;
+    height: 168px;
+  }
+
+  #home-page-footer-common {
+    flex-direction: column;
+  }
+
+  #home-page-footer-list-common {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  #newsletter-email-home-page-common {
+    flex-direction: column !important;
+    align-items: center;
+  }
+
+  #newsletter-email-home-page-common > div > button {
+    margin-top: 10px;
+  }
+}
