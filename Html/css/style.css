@@ -7,7 +7,7 @@
 /*navigation bar header home page*/
 
 #navbar-home-page {
-  background-image: url("back.png");
+  background-image: url("../img/back.png");
   color: #ffffff;
   padding-top: 100px;
 }
@@ -307,5 +307,286 @@ input::-webkit-input-placeholder {
 
   #newsletter-email-home-page-common > div > button {
     margin-top: 10px;
+  }
+}
+
+/*faq*/
+
+/*nav bar*/
+.blue-btn-nav-header {
+  background-color: #29626d !important;
+  opacity: 1 !important;
+}
+
+.forma-1-copy-5-faq-prices-page::before {
+  position: relative;
+  bottom: 12px;
+  right: 5px;
+  content: " ";
+  display: block;
+  border-bottom: 2px solid #dddddd;
+  width: 70px;
+}
+
+.forma-1-copy-5-faq-prices-page::after {
+  position: relative;
+  bottom: 12px;
+  left: 5px;
+  content: " ";
+  display: block;
+  border-bottom: 2px solid #dddddd;
+  width: 70px;
+}
+/*page title for faq and prices page*/
+.page-title-faq-prices-page {
+  font-size: 36px;
+  font-weight: 500;
+  color: #4f4f4f;
+}
+
+#faqs-page-tagline {
+  max-width: 498px;
+  color: #646464;
+  font-size: 18px;
+  margin: auto;
+}
+
+.faq-item {
+  border: none !important;
+}
+
+.faq-question {
+  color: #646464 !important;
+  font-weight: bold !important;
+  background-color: white !important;
+  border: none !important;
+}
+
+.faq-question-text {
+  padding: 0 10px !important;
+  border: none !important;
+}
+
+.faq-content {
+  color: #646464;
+  padding: 0 50px !important;
+  border: none !important;
+}
+
+#faq-sections {
+  border-bottom: 5px solid #1d7a8c;
+}
+/*both blocks*/
+.labl {
+  display: block;
+  max-width: 472px;
+  font-size: 24px;
+  padding: 0px !important;
+}
+/*for customer block*/
+.label1 {
+  background-color: #1d7a8c;
+  color: white;
+  cursor: pointer;
+}
+/*for service provider block*/
+.label2 {
+  background-color: #f6f6f6;
+  color: #666666;
+  cursor: pointer;
+}
+
+.box {
+  display: none;
+  margin-top: 20px;
+}
+
+.accordion-button:focus {
+  box-shadow: none !important;
+}
+
+.accordion-button:not(.collapsed) {
+  box-shadow: none !important;
+}
+
+.accordion-button::before {
+  flex-shrink: 0;
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-left: auto;
+  content: "";
+  background-image: url(../img/right-arrow.png);
+  background-repeat: no-repeat;
+  background-size: 1.25rem;
+  transition: transform 0.2s ease-in-out;
+}
+
+.accordion-button:not(.collapsed)::before {
+  background-image: url(../img/right-arrow.png);
+  transform: rotate(90deg);
+}
+
+.accordion-button:not(.collapsed)::after,
+.accordion-button::after {
+  background-image: none !important;
+}
+
+/* Prices */
+.prices-card {
+  border: 1px solid #b0c9ce;
+}
+
+.prices-card h1 {
+  background-color: #1d7a8c;
+  color: white;
+  font-size: 28px;
+  font-weight: bold;
+  padding: 12px 0 13px 0;
+}
+
+.prices-card h2 {
+  color: #646464;
+  font-size: 48px;
+}
+
+.prices-card h2 span {
+  font-size: 30px;
+}
+
+.prices-card ul {
+  list-style-type: none;
+  text-align: left;
+  padding: 15px 0 0 150px;
+}
+
+.prices-card ul li {
+  padding: 6px 0;
+}
+
+.p-16 {
+  color: #646464;
+}
+
+.p-bold-18 {
+  font-size: 18px;
+  font-weight: bold;
+  color: #1d7a8c;
+}
+/*extra services prices page*/
+#extra-services-prices-page div > div {
+  width: 108px;
+  height: 108px;
+  border-radius: 50%;
+  border: 1px solid #b0c9ce;
+}
+
+#extra-services-prices-page div img {
+  position: relative;
+  top: 27px;
+}
+
+#extra-services-prices-page div img#oven {
+  top: 35px;
+}
+
+/*cleaning prices page*/
+#cleaning-prices-page {
+  padding: 30px 0;
+}
+
+#cleaning-prices-page div div {
+  padding: 0px;
+}
+
+#cleaning-prices-page ul {
+  list-style-type: none;
+  padding: 0px;
+  height: 225px;
+}
+
+#cleaning-prices-page h2 {
+  color: #4f4f4f;
+  font-weight: bold;
+  font-size: 20px;
+  padding-top: 15px;
+}
+
+#cleaning-prices-page ul li {
+  padding: 6px 0;
+}
+
+/*why helperland prices page*/
+#why-helperland-prices-page > div#first h2 {
+  font-size: 20px;
+  font-weight: bold;
+  color: #646464;
+  text-align: right;
+}
+
+#why-helperland-prices-page > div#first p {
+  font-size: 14px;
+  color: #646464;
+  text-align: right !important;
+}
+
+#why-helperland-prices-page > div#second h2 {
+  font-size: 20px;
+  font-weight: bold;
+  color: #646464;
+  text-align: left;
+}
+
+#why-helperland-prices-page > div#second p {
+  font-size: 14px;
+  color: #646464;
+  text-align: left;
+  max-width: 285px;
+}
+
+@media (max-width: 992px) {
+  .navbar-collapse {
+    background-color: rgb(41, 41, 41);
+    text-align: left !important;
+    padding-left: 20px;
+  }
+
+  .blog-card-helper {
+    margin-bottom: 10px !important;
+  }
+
+  #extra-services-prices-page {
+    flex-direction: column;
+  }
+
+  #extra-services-prices-page div > div {
+    margin: auto;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .prices-card ul {
+    padding-left: 50px;
+  }
+
+  #why-helperland-prices-page > div#second h2 {
+    text-align: center;
+  }
+
+  #why-helperland-prices-page > div#second p {
+    text-align: center;
+    margin: auto;
+    padding-bottom: 20px;
+  }
+
+  #why-helperland-prices-page > div#first h2 {
+    text-align: center;
+  }
+
+  #why-helperland-prices-page > div#first p {
+    text-align: center !important;
+    margin: auto !important;
+    /* padding-bottom: 20px; */
+    max-width: 285px;
+    padding: 0 0 20px 0 !important;
   }
 }
