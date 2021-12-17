@@ -591,10 +591,129 @@ input::-webkit-input-placeholder {
 
 /*conatct us page*/
 
-#map-image-contact-page {
+.contact-us-image-page .icon {
+  color: #4f4f4f;
+  text-align: center;
+  font-size: 16px;
+  width: 238px;
+  display: flex;
+  flex-direction: column;
+  margin: 10px 10px;
+}
+.contact-us-image-page img {
+  height: 60px;
+  margin: 0 0 10px;
+}
+
+.contact-us-page .get-in-touch-contact-us-page {
+  margin: 74px 0 0 0;
+  padding: 74px 0;
+  border-top: 2px solid #e1e1e1;
+}
+.contact-us-page .contact-us-form {
+  max-width: 614px;
+  font-size: 16px;
+  color: #a0a0a0;
+  margin: auto;
+}
+.contact-us-page .contact-us-form div {
+  display: inline-block;
+  width: 299px;
+}
+.contact-us-page .contact-us-form .full-width {
+  display: block;
+  width: 100%;
+}
+.contact-us-page .contact-us-form input,
+select,
+textarea {
+  width: 100%;
+  padding: 9px 14px;
+  border: 1px solid #c8c8c8;
+  border-radius: 4px;
+  margin: 7.5px 0;
+}
+.contact-us-page .contact-us-form select {
+  width: 100%;
+  padding: 9px 14px;
+  border: 1px solid #c8c8c8;
+  border-radius: 4px;
+  color: #a0a0a0;
+  background-color: white;
+}
+.contact-us-page .contact-us-form .button {
+  font-size: 20px;
+  color: white;
+  padding: 6px 50px;
+  border-radius: 46px;
+  background-color: #1d7a8c;
+  border: none;
+  display: inline-block;
+  margin: auto;
+}
+
+a {
+  text-decoration: none !important;
+  cursor: pointer !important;
+}
+
+.mobile {
+  display: flex !important;
+  margin: 7.5px 0;
+}
+.mobile input {
+  margin: 0 !important;
+  border-top-left-radius: 0px !important;
+  border-bottom-left-radius: 0px !important;
+}
+.country-code {
+  height: 46px;
+  width: 52px;
+  background-color: #c8c8c8;
+  opacity: 1;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+input[type="checkbox"] {
+  height: 20px !important;
+  width: 20px !important;
+  margin-right: 7px !important;
+  position: relative;
+  top: 4px;
+}
+.terms {
+  color: #1fb6ff !important;
+}
+
+.content {
+  max-width: 992px;
+  margin: auto;
+}
+
+@media screen and (max-width: 660px) {
+  .container-fluid {
+    padding: 0px 10px;
+  }
+
+  .contact-us-page .contact-us-form div {
+    display: block;
+    width: 100%;
+  }
+
+  .register-now .form {
+    padding: 20px 18px;
+  }
+}
+
+/*map image contact page*/
+#map-image-contact-us-page {
   position: relative;
 }
-#map-image-contact-page .pin {
+#map-image-contact-us-page .pin {
   position: absolute;
   left: 45.4%;
   top: 45.5%;
@@ -642,10 +761,4 @@ input::-webkit-input-placeholder {
   letter-spacing: normal;
   text-align: center;
   color: #646464;
-}
-
-@media (max-width: 414px) {
-  #about-us .title {
-    font-size: 27px;
-  }
 }
