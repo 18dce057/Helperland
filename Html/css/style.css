@@ -762,3 +762,123 @@ input[type="checkbox"] {
   text-align: center;
   color: #646464;
 }
+
+/*service-provider->become provider page*/
+#navbar-service-page {
+  background-image: url("../img/become-a-pro-banner.png");
+  color: #ffffff;
+  padding-top: 100px;
+  background-repeat: no-repeat;
+}
+
+.service_provider_become_pro {
+  background-size: cover;
+  min-height: 900px;
+  width: 100%;
+  height: 100%;
+}
+.service_provider_become_pro .container {
+  padding-top: 170px;
+}
+.form_service_provider {
+  max-width: 450px;
+  width: 100%;
+}
+.form_service_provider h2 {
+  font-size: 24px;
+  font-weight: 700;
+  text-align: center;
+  color: #4f4f4f;
+}
+.form_service_provider form {
+  padding: 19px 35px;
+  background-color: white;
+}
+.form_submit_button_service_provider {
+  width: 166px;
+  height: 46px;
+  background-color: #1d7a8c;
+  color: white;
+  border-radius: 23px;
+  border: none;
+}
+.form_submit_button_service_provider h3 {
+  font-size: 16px;
+  font-weight: 700;
+  padding-top: 9px;
+}
+.form_check_box_service_provider {
+  height: 20px;
+  width: 20px;
+  margin-left: 5px;
+}
+.form_check_label_service_provider {
+  padding-left: 10px;
+  color: #4f4f4f;
+  font-size: 16px;
+  font-weight: 400;
+}
+.form_check_label_service_provider a {
+  color: #1fb6ff;
+  text-decoration: none;
+}
+.service_provider_become_pro .scroll-link-wrapper {
+  text-align: center;
+}
+.row .form-control {
+  height: 46px;
+}
+
+/*how it works service provider->become provider page*/
+
+.howitworks_service_provider {
+  padding: 35px 0 50px;
+  position: relative;
+}
+.howitworks_service_provider:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 100px;
+  background-image: url(../img/blog-left-bg.png);
+  background-repeat: no-repeat;
+  width: 154px;
+  height: calc(100% - 100px);
+  z-index: -1;
+}
+.howitworks_service_provider:after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 100px;
+  background-image: url(../img/blog-right-bg.png);
+  background-repeat: no-repeat;
+  width: 174px;
+  height: calc(100% - 100px);
+  z-index: -1;
+}
+.howitworks_service_provider h2 {
+  font-size: 40px;
+  font-weight: 700;
+}
+.howitworks_service_provider h3 {
+  font-size: 32px;
+  font-weight: 700;
+}
+.howitworks_service_provider a {
+  text-decoration: none;
+  color: #4f4f4f;
+}
+.howitworks_service_provider_info .row {
+  padding: 20px 0 20px;
+}
+.howitworks_service_provider_info h2 {
+  max-width: 500px;
+  font-weight: 700;
+}
+.howitworks_service_provider_info p {
+  font-size: 18px;
+  margin: 0 0 25px;
+  max-width: 620px;
+  font-weight: 400;
+}
