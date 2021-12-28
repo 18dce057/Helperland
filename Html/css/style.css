@@ -880,5 +880,206 @@ input[type="checkbox"] {
   font-size: 18px;
   margin: 0 0 25px;
   max-width: 620px;
-  font-weight: 401;
+  font-weight: 400;
+}
+
+/*service provider upcoming service*/
+.vertical_line {
+  height: 48px;
+  width: 1px;
+  background-color: #e1e1e1;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+#notification {
+  padding: 10px 7px 5px 7px;
+}
+
+/*service welcome for both 6&7 */
+.service-welcome {
+  padding-top: 72px;
+  background-color: #f9f9f9;
+  border: 1px solid #e1e1e1;
+  height: 184px;
+}
+.service-welcome-text {
+  font-size: 30px;
+  font-weight: 400;
+  color: #4f4f4f;
+  padding-top: 38px;
+  padding-bottom: 44px;
+}
+.service-welcome-title {
+  font-size: 30px;
+  font-weight: 700;
+  color: #4f4f4f;
+  padding-bottom: 5px;
+  margin-left: 1px;
+}
+
+.service-table {
+  background-color: #1d7a8c;
+  width: 262px;
+  height: auto;
+}
+.service-table-details {
+  padding-top: 25px;
+}
+.service-table ul {
+  list-style-type: none;
+  margin-left: -33px;
+}
+.service-table ul li {
+  border-bottom: 0.5px solid #e1e1e1;
+  line-height: 55px;
+}
+.service-table ul li a {
+  padding-left: 15px;
+  font-size: 18px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: #ffffff;
+  font-weight: 400;
+  text-decoration: none;
+}
+.service-table-active {
+  background-color: #146371;
+  border-left: 1px solid white;
+}
+.service_detail {
+  width: 845px;
+  height: auto;
+  margin-left: 32px;
+  margin-right: 25px;
+}
+.service_detail p {
+  font-size: 16px;
+  font-weight: 700;
+  color: #646464;
+}
+.service_detail_head_bg {
+  background-color: #f9f9f9;
+  border: 1px solid #e1e1e1;
+}
+.service_details {
+  border: 1px solid #e1e1e1;
+}
+.service_details p {
+  font-size: 16px;
+  color: #646464;
+  font-weight: 400;
+}
+.service_detail_cancel {
+  color: white;
+  background-color: #ff6b6b;
+  border-radius: 17px;
+  height: 34px;
+  width: 80px;
+  border: none;
+  margin-bottom: 15px;
+}
+.service-table-main-page {
+  display: flex;
+  justify-content: center;
+}
+.arow {
+  margin-right: 7px;
+}
+
+/*customer service history*/
+.ajust {
+  display: flex;
+  justify-content: space-between;
+  margin-left: -12px;
+}
+.ajust-bottom {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 8px;
+}
+.rotate {
+  transform: rotate(180deg);
+}
+.service_detail_page {
+  color: white;
+  background-color: #146371;
+  border-radius: 38px;
+  height: 38px;
+  width: 38px;
+  border: none;
+  margin-bottom: 15px;
+}
+.service_detail_export {
+  color: white;
+  background-color: #146371;
+  border-radius: 17px;
+  height: 34px;
+  width: 70px;
+  border: none;
+  margin-bottom: 15px;
+}
+.customer-service-history-rates {
+  width: 70px;
+  height: 34px;
+  background-color: #6da9b5;
+  color: white;
+  font-size: 14px;
+  border: none;
+  border-radius: 17px;
+  margin-bottom: 15px;
+}
+.customer-service-history-payment {
+  color: #1d7a8c;
+  font-size: 24px;
+  font-weight: 700;
+}
+.customer-service-history-completed {
+  background-color: #67b644;
+  font-size: 14px;
+  color: white;
+  height: 24px;
+  width: 80px;
+  padding: 2px 5px;
+  margin-bottom: 13px;
+}
+.customer-service-history-cancelled {
+  background-color: #ff6b6b;
+  font-size: 14px;
+  color: white;
+  height: 24px;
+  width: 80px;
+  padding: 2px 7px;
+  margin-bottom: 13px;
+}
+.customer-service-history-cap {
+  width: 40px !important;
+  height: 40px !important;
+  border: 1px solid #b0c9ce;
+  opacity: 1;
+  border-radius: 50%;
+  padding-left: 5px !important;
+  padding-top: 5px !important;
+}
+.customer-service-history-last-row {
+  font-size: 14px;
+  color: #646464;
+}
+.customer-service-history-last-row-btn-border {
+  height: 38px;
+  width: 38px;
+  border: 1px solid #e1e1e1;
+  border-radius: 50%;
+}
+.customer-service-history-last-row ul li {
+  display: inline-block;
+  text-align: center;
+  padding-top: 7px;
+}
+.customer-service-history-last-row ul li:hover {
+  background-color: #1d7a8c;
+  color: white !important;
+}
+.customer-service-history-last-row-active-btn {
+  background-color: #1d7a8c;
+  color: white;
 }
