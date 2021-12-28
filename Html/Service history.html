@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service History</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="./js/main.js"></script>
+    <link rel="stylesheet" href="./css/style.css">
+
+</head>
+
+<body>
+
+    <!--Header customer service history page-->
+    <nav style="background-color: rgba(82, 82, 82, 0.9);" class="navbar navbar-dark navbar-expand-lg" id="nav">
+        <div class="container-fluid">
+            <a class="navbar-brand me-auto" href="#">
+                <img id="navlogo" style="height: 54px; width: 73px" src="./img/logo-large.png" alt="">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class=" navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav d-flex align-items-lg-center justify-content-lg-end justify-content-sm-start"
+                    id="navw">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="#">
+                            <button type="button" class="navbar-button btn btn-outline-light">Book Now</button>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="#">Prices & Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Warranty</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                
+                    <li>
+                        <div class="vertical_line">
+                        </div>
+                    </li>
+                    <li class="notification">
+                        <div class="align-items-center justify-content-center" id="notification">
+                            <a href="#"><img src="./img/icon-notification.png"></a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="vertical_line">
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a class="nav-link" id="drpdwn" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="./img/user.png" class="arow">
+                            <img src="./img/sp-arrow-down.png">
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#"><img src="./img/flag.png" alt="">
+                                    <span class="span-drop">INDIA</span> </a></li>
+                            <li><a class="dropdown-item" href="#"><img src="./img/flag.png" alt="">
+                                    <span class="span-drop">CANADA</span> </a></li>
+                            <li><a class="dropdown-item" href="#"><img src="./img/flag.png" alt="">
+                                    <span class="span-drop">GERMANY</span> </a></li>
+                        </ul>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <main>
+        <section class="service-welcome">
+            <div class="text-center d-flex justify-content-center align-items-center">
+                <div class="service-welcome-text">
+                    Welcome,
+                </div>
+                <div class="service-welcome-title">
+                    Shraddha
+                </div>
+                <div class="service-welcome-title">
+                    !
+                </div>
+            </div>
+        </section>
+    
+        <section class="service-table-details ">
+            <div class="service-table-main-page mx-auto">
+                <div class="service-table">
+                    <ul>
+                        <li class=""><a href="#" class="">Dashboard</a></li>
+                        <li class="service-table-active"><a href="#" class="service-table-active">Service History</a></li>
+                        <li class=""><a href="#" class="">Service Schedule</a></li>
+                        <li class=""><a href="#" class="">Favourite Pros</a></li>
+                        <li class=""><a href="#" class="">Invoices</a></li>
+                        <li class=""><a href="#" class="">Notofications</a></li>
+                    </ul>
+                </div>
+                <div class="service_detail">
+                    <div class="row">
+                        <div class="ajust">
+                            <h4>Service history</h4>
+                            <button class="service_detail_export">Export</button>
+                        </div>
+                    </div>
+                    <div class="row service_detail_head_bg pt-3">
+                        <div class="col-md-3">
+                            <p>Service Details <img src="./img/sort.png"></p>
+                        </div>
+                        <div class="col-md-3">
+                            <p>Service Provider <img src="./img/sort.png"></p>
+                        </div>
+                        <div class="col-md-2">
+                            <p>Payment <img src="./img/sort.png"></p>
+                        </div>
+                        <div class="col-md-2">
+                            <p>Status <img src="./img/sort.png"></p>
+                        </div>
+                        <div class="col-md-2">
+                            <p>Rate SP</p>
+                        </div>
+                    </div>
+                    <div class="row service_details pt-3">
+                        <div class="col-md-3">
+                            <div class="row">
+                                <p><img src="./img/calendar.png"> <b>09/04/2018</b><br>
+                                    12:00 - 18:00</p>
+                            </div>
+                        </div>
+                        <div class="col-md-3 ">
+                            <div class="row">
+                                <div class="col-sm-3 customer-service-history-cap ">
+                                    <img src="img/cap.png" id="cap">
+                                </div>
+                                <div class="col-sm-9 ">
+                                    <p>Lyum Watson<br>
+                                        <img src="./img/star1.png">
+                                        <img src="img/star1.png">
+                                        <img src="img/star1.png">
+                                        <img src="img/star1.png">
+                                        <img src="img/star2.png">
+                                        4
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2 customer-service-history-payment">
+                            € 63
+                        </div>
+                        <div class="col-md-2 sh_status align-items-center pt-1">
+                            <div class="customer-service-history-completed">
+                                Completed
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <button class="customer-service-history-rates">Rate SP</button>
+                        </div>
+                    </div>
+                    <div class="row service_details pt-3">
+                        <div class="col-md-3">
+                            <div class="row">
+                                <p><img src="./img/calendar.png"> <b>09/04/2018</b><br>
+                                    12:00 - 18:00</p>
+                            </div>
+                        </div>
+                        <div class="col-md-3 ">
+                            <div class="row">
+                                <div class="col-sm-3 customer-service-history-cap ">
+                                    <img src="img/cap.png" id="cap">
+                                </div>
+                                <div class="col-sm-9 ">
+                                    <p>Lyum Watson<br>
+                                        <img src="img/star1.png">
+                                        <img src="img/star1.png">
+                                        <img src="img/star1.png">
+                                        <img src="img/star1.png">
+                                        <img src="img/star2.png">
+                                        4
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2 customer-service-history-payment">
+                            € 63
+                        </div>
+                        <div class="col-md-2 sh_status align-items-center pt-1">
+                            <div class="customer-service-history-completed">
+                                Completed
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <button class="customer-service-history-rates">Rate SP</button>
+                        </div>
+                    </div>
+                    <div class="row service_details pt-3">
+                        <div class="col-md-3">
+                            <div class="row">
+                                <p><img src="./img/calendar.png"> <b>09/04/2018</b><br>
+                                    12:00 - 18:00</p>
+                            </div>
+                        </div>
+                        <div class="col-md-3 ">
+                            <div class="row">
+                                <div class="col-sm-3 customer-service-history-cap ">
+                                    <img src="./img/cap.png" id="cap">
+                                </div>
+                                <div class="col-sm-9 ">
+                                    <p>Lyum Watson<br>
+                                        <img src="img/star1.png">
+                                        <img src="img/star1.png">
+                                        <img src="img/star1.png">
+                                        <img src="img/star1.png">
+                                        <img src="img/star2.png">
+                                        4
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2 customer-service-history-payment">
+                            € 63
+                        </div>
+                        <div class="col-md-2 sh_status align-items-center pt-1">
+                            <div class="customer-service-history-completed">
+                                Completed
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <button class="customer-service-history-rates">Rate SP</button>
+                        </div>
+                    </div>
+                    <div class="row service_details pt-3">
+                        <div class="col-md-3">
+                            <div class="row">
+                                <p><img src="./img/calendar.png"> <b>09/04/2018</b><br>
+                                    12:00 - 18:00</p>
+                            </div>
+                        </div>
+                        <div class="col-md-3 ">
+                            <div class="row">
+                                <div class="col-sm-3 customer-service-history-cap ">
+                                    <img src="./img/cap.png" id="cap">
+                                </div>
+                                <div class="col-sm-9 ">
+                                    <p>Lyum Watson<br>
+                                        <img src="img/star1.png">
+                                        <img src="img/star1.png">
+                                        <img src="img/star1.png">
+                                        <img src="img/star1.png">
+                                        <img src="img/star2.png">
+                                        4
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2 customer-service-history-payment">
+                            € 63
+                        </div>
+                        <div class="col-md-2 sh_status align-items-center pt-1">
+                            <div class="customer-service-history-completed">
+                                Completed
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <button class="customer-service-history-rates">Rate SP</button>
+                        </div>
+                    </div>
+                    <div class="row service_details pt-3">
+                        <div class="col-md-3">
+                            <div class="row">
+                                <p><img src="img/calendar.png"> <b>09/04/2018</b><br>
+                                    12:00 - 18:00</p>
+                            </div>
+                        </div>
+                        <div class="col-md-3 ">
+                            <div class="row">
+                                <div class="col-sm-3 customer-service-history-cap">
+                                    <img src="img/cap.png" id="cap">
+                                </div>
+                                <div class="col-sm-9 ">
+                                    <p>Lyum Watson<br>
+                                        <img src="img/star1.png">
+                                        <img src="img/star1.png">
+                                        <img src="img/star1.png">
+                                        <img src="img/star1.png">
+                                        <img src="img/star2.png">
+                                        4
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2 customer-service-history-payment">
+                            € 63
+                        </div>
+                        <div class="col-md-2 sh_status align-items-center pt-1">
+                            <div class="customer-service-history-cancelled">
+                                Cancelled
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <button class="customer-service-history-rates">Rate SP</button>
+                        </div>
+                    </div>
+                    <div class="row service_details pt-3">
+                        <div class="col-md-3">
+                            <div class="row">
+                                <p><img src="./img/calendar.png"> <b>09/04/2018</b><br>
+                                    12:00 - 18:00</p>
+                            </div>
+                        </div>
+                        <div class="col-md-3 ">
+                            <div class="row">
+                                <div class="col-sm-3 customer-service-history-cap">
+                                    <img src="img/cap.png" id="cap">
+                                </div>
+                                <div class="col-sm-9 ">
+                                    <p>Lyum Watson<br>
+                                        <img src="img/star1.png">
+                                        <img src="img/star1.png">
+                                        <img src="img/star1.png">
+                                        <img src="img/star1.png">
+                                        <img src="img/star2.png">
+                                        4
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2 customer-service-history-payment">
+                            € 63
+                        </div>
+                        <div class="col-md-2 sh_status align-items-center pt-1">
+                            <div class="customer-service-history-completed">
+                                Completed
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <button class="customer-service-history-rates">Rate SP</button>
+                        </div>
+                    </div>
+                    <div class="row service_details pt-3">
+                        <div class="col-md-3">
+                            <div class="row">
+                                <p><img src="./img/calendar.png"> <b>09/04/2018</b><br>
+                                    12:00 - 18:00</p>
+                            </div>
+                        </div>
+                        <div class="col-md-3 ">
+                            <div class="row">
+                                <div class="col-sm-3 customer-service-history-cap ">
+                                    <img src="img/cap.png" id="cap">
+                                </div>
+                                <div class="col-sm-9 ">
+                                    <p>Lyum Watson<br>
+                                        <img src="img/star1.png">
+                                        <img src="img/star1.png">
+                                        <img src="img/star1.png">
+                                        <img src="img/star1.png">
+                                        <img src="img/star2.png">
+                                        4
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2 customer-service-history-payment">
+                            € 63
+                        </div>
+                        <div class="col-md-2 sh_status align-items-center pt-1">
+                            <div class="customer-service-history-completed">
+                                Completed
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <button class="customer-service-history-rates">Rate SP</button>
+                        </div>
+                    </div>
+                    <div class="row service_details pt-3">
+                        <div class="col-md-3">
+                            <div class="row">
+                                <p><img src="./img/calendar.png"> <b>09/04/2018</b><br>
+                                    12:00 - 18:00</p>
+                            </div>
+                        </div>
+                        <div class="col-md-3 ">
+                            <div class="row">
+                                <div class="col-sm-3 customer-service-history-cap">
+                                    <img src="img/cap.png" id="cap">
+                                </div>
+                                <div class="col-sm-9 ">
+                                    <p>Lyum Watson<br>
+                                        <img src="img/star1.png">
+                                        <img src="img/star1.png">
+                                        <img src="img/star1.png">
+                                        <img src="img/star1.png">
+                                        <img src="img/star2.png">
+                                        4
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2 customer-service-history-payment">
+                            € 63
+                        </div>
+                        <div class="col-md-2 sh_status align-items-center pt-1">
+                            <div class="customer-service-history-cancelled">
+                                Cancelled
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <button class="customer-service-history-rates">Rate SP</button>
+                        </div>
+                    </div>
+                    <div class="row service_details pt-3">
+                        <div class="col-md-3">
+                            <div class="row">
+                                <p><img src="./img/calendar.png"> <b>09/04/2018</b><br>
+                                    12:00 - 18:00</p>
+                            </div>
+                        </div>
+                        <div class="col-md-3 ">
+                            <div class="row">
+                                <div class="col-sm-3 customer-service-history-cap">
+                                    <img src="img/cap.png" id="cap">
+                                </div>
+                                <div class="col-sm-9 ">
+                                    <p>Lyum Watson<br>
+                                        <img src="img/star1.png">
+                                        <img src="img/star1.png">
+                                        <img src="img/star1.png">
+                                        <img src="img/star1.png">
+                                        <img src="img/star2.png">
+                                        4
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2 customer-service-history-payment">
+                            € 63
+                        </div>
+                        <div class="col-md-2 sh_status align-items-center pt-1">
+                            <div class="customer-service-history-cancelled">
+                                Cancelled
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <button class="customer-service-history-rates">Rate SP</button>
+                        </div>
+                    </div>
+                    <div class="row service_details pt-3">
+                        <div class="col-md-3">
+                            <div class="row">
+                                <p><img src="./img/calendar.png"> <b>09/04/2018</b><br>
+                                    12:00 - 18:00</p>
+                            </div>
+                        </div>
+                        <div class="col-md-3 ">
+                            <div class="row">
+                                <div class="col-sm-3 customer-service-history-cap ">
+                                    <img src="img/cap.png" id="cap">
+                                </div>
+                                <div class="col-sm-9 ">
+                                    <p>Lyum Watson<br>
+                                        <img src="img/star1.png">
+                                        <img src="img/star1.png">
+                                        <img src="img/star1.png">
+                                        <img src="img/star1.png">
+                                        <img src="img/star2.png">
+                                        4
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2 customer-service-history-payment">
+                            € 63
+                        </div>
+                        <div class="col-md-2 sh_status align-items-center pt-1">
+                            <div class="customer-service-history-completed">
+                                Completed
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <button class="customer-service-history-rates">Rate SP</button>
+                        </div>
+                    </div>
+               
+                    <div class="row mt-2 customer-service-history-last-row">
+                        <div class="col-md-4">
+                            <label for="no_rows">Show </label>
+                            <select name="cars" id="cars">
+                                <option value="10">10</option>
+                                <option value="50">50</option>
+                                <option value="100">100</option>
+                                <option value="200">200</option>
+                            </select>
+                            entries Total Record: 55
+                        </div>
+                        <div class="col-md-2">
+                        </div>
+                        <div class="col-md-6">
+                            <div class="d-inline-block">
+                                <ul>
+                                    <li class="customer-service-history-last-row-btn-border">
+                                        <img src="./img/polygon-1-copy-5.png">
+                                    </li>
+                                    <li class="customer-service-history-last-row-btn-border">
+                                        <img src="./img/keyboard-right-arrow-button-copy.png">
+                                    </li>
+                                    <li class="customer-service-history-last-row-btn-border customer-service-history-last-row-active-btn">1</li>
+                                    <li class="customer-service-history-last-row-btn-border">2</li>
+                                    <li class="customer-service-history-last-row-btn-border">3</li>
+                                    <li class="customer-service-history-last-row-btn-border">4</li>
+                                    <li class="customer-service-history-last-row-btn-border">
+                                        <img src="./img/keyboard-right-arrow-button-copy.png" class="rotate">
+                                    </li>
+                                    <li class="customer-service-history-last-row-btn-border">
+                                        <img src="./img/polygon-1-copy-5.png" class="rotate">
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+            </div>
+        </section>
+    </main>
+    
+    <div class="pb-5"></div>
+
+
+    <!--footer customer service history page -->
+    <footer id="home-page-footer-common">
+        <div class="d-flex flex-column flex-md-row justify-content-around align-items-center">
+            <img src="./img/footer-logo.png" alt="" width="120" height="92">
+            <ul class="d-flex text-uppercase" id="home-page-footer-list-common">
+                <li>home</li>
+                <li>about</li>
+                <li>testimonials</li>
+                <li>faqs</li>
+                <li>insurance policy</li>
+                <li>impressum</li>
+            </ul>
+            <div class="px-4 d-flex" id="home-page-footer-social-media-common">
+                <div>
+                    <img src="./img/ic-facebook.png" width="9" height="18" alt="">
+                </div>
+                <div>
+                    <img src="./img/ic-instagram.png" width="20" height="20" alt="">
+                </div>
+            </div>
+
+        </div>
+        <hr class="mx-5" style="background-color: white;">
+        <p class="text-center" style="font-size: 14px; color: #9BA0A3">©2018 Helperland. All rights reserved. Terms and
+            Conditions | Privacy Policy</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</body>
+
+</html>
