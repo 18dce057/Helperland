@@ -1,4 +1,6 @@
-﻿<!DOCTYPE html>
+@model Helperland.ViewModel.ContactusViewModel
+
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -19,7 +21,7 @@
 <nav style="background-color: rgba(82, 82, 82, 0.9);" class="navbar navbar-dark navbar-expand-lg" id="nav">
     <div class="container-fluid">
         <a class="navbar-brand me-auto" href="#">
-            <img id="navlogo" style="height: 54px; width: 73px" src="./img/logo-large.png" alt="">
+            <img id="navlogo" style="height: 54px; width: 73px" src="~/img/logo-large.png" alt="">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
             aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -66,7 +68,7 @@
 <!--contact us -->
 <div class="container-fluid contact-us-page">
     <h1 class="text-center py-3 page-title-faq-prices-page">Contact Us</h1>
-    <div class="d-flex justify-content-center forma-1-copy-5-faq-prices-page"><img src="./img/forma-1-copy-5.png" width="24" height="25" alt=""></div>
+    <div class="d-flex justify-content-center forma-1-copy-5-faq-prices-page"><img src="~/css/t[[t]]" width="24" height="25" alt=""></div>
     <div class="content">
         <div class="contact-us-image-page d-flex justify-content-around flex-wrap">
             <div class="icon">
@@ -87,27 +89,53 @@
         </div>
 
         <!--get in touch contact page-->
+        <section class="contact">
         <div class="get-in-touch-contact-us-page">
             <h2 class="text-center py-3 page-title-faq-prices-page">Get in touch with us</h2>
-            <div class="contact-us-form d-flex justify-content-between flex-wrap">
-                <div><input type="text" name="firstname" id="" placeholder="First Name"></div>
-                <div><input type="text" name="lastname" id="" placeholder="Last Name"></div>
-                <div class="mobile"><span class="country-code">+49</span><input type="text" name="mobile" id=""
-                        placeholder="Mobile number"></div>
-                <div class=""><input type="text" name="email" id="" placeholder="Email address"></div>
-                <div class="full-width">
-                    <select name="option" id="" placeholder="Subject">
-                        <option value="">Subject</option>
-                        <option value="">Option2</option>
-                        <option value="">Option3</option>
-                        <option value="">Option4</option>
-                    </select>
-                </div>
-                <div class="full-width"><textarea name="message" id="" placeholder="Message" rows="5"></textarea>
-                </div>
-                <button type="submit" class="button">Submit</button>
+            <div class="contact-us-form d-flex justify-content-between flex-wrap mx-auto">
+                <form class="row  g-3" asp-action="Contact" asp-controller="Home">
+                    <div class="col-md-6">
+                        <input type="text" asp-for="FirstName" class="form-control" id="Firstname" placeholder="First Name" required>
+                    </div>
+                    <div class="col-md-6">
+                        <input type="text" asp-for="LastName" class="form-control" id="Lastname" placeholder="Last Name" required>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="row g-0">
+                            <div class="col-sm-12 input-group mobile">
+                                <span class="country-code align-items-center justify-content-center">+49</span>
+                                <input type="tel" asp-for="PhoneNumber" class="form-control" id="Phone number" placeholder="Mobile Number" pattern="[0-9]{10}" onkeypress="return (event.charCode !=8 && event.charCode ==0 || ( event.charCode == 46 || (event.charCode >= 48 && event.charCode <= 57)))" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <input type="email" asp-for="Email" class="form-control" id="Email" placeholder="Email address" required>
+                    </div>
+                    <div class="col-md-12">
+                        <select asp-for="Subject" class="form-select form-sub" aria-label="Default select example">
+                            <option selected value="General">General</option>
+                            <option value="Inquiry">Inquiry</option>
+                            <option value="Renewal">Renewal</option>
+                            <option value="Reluctance">Reluctance</option>
+                        </select>                    
+                    </div>
+                    <div class="col-md-12">
+                        <textarea class="form-control" asp-for="Message" id="message" placeholder="Messages" rows="4"></textarea>
+                    </div>
+                    <div class="col-md-12 text-center bt">
+                        <button class="c_sub_btn" type="submit" name="Submit"><h3>Submit</h3></button>
+                    </div>
+                </form>
             </div>
         </div>
+    </section>
+        
+
+
+
+
+    
+
     </div>
 </div>
 
@@ -137,7 +165,7 @@
 <!--footer contact page -->
 <footer id="home-page-footer-common">
     <div class="d-flex flex-column flex-md-row justify-content-around align-items-center">
-        <img src="./img/footer-logo.png" alt="" width="120" height="92">
+        <img src="~/img/footer-logo.png" alt="" width="120" height="92">
         <ul class="d-flex text-uppercase" id="home-page-footer-list-common">
             <li>home</li>
             <li>about</li>
@@ -166,6 +194,9 @@
     crossorigin="anonymous"></script>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+
+   
 </body>
 
 </html>
