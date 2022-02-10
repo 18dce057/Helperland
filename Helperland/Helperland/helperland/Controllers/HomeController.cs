@@ -9,10 +9,23 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
-
-
-
-
+using Helperland.Data;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
+using System;
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Linq;
+using System.Threading.Tasks;
+using Helperland.Models;
+using Helperland.Data;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
+using System;
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace Helperland.Controllers
 {
@@ -33,22 +46,6 @@ namespace Helperland.Controllers
         {
             return View();
         }
-        
-        public IActionResult faq()
-        {
-            return View();
-        }
-
-        public IActionResult prices()
-        {
-            return View();
-        }
-
-        public IActionResult About()
-        {
-            return View();
-        }
-
 
         public IActionResult Contact()
         {
@@ -116,7 +113,20 @@ namespace Helperland.Controllers
         }
 
 
-        
+        public IActionResult faq()
+        {
+            return View();
+        }
+
+        public IActionResult prices()
+        {
+            return View();
+        }
+
+        public IActionResult About()
+        {
+            return View();
+        }
 
         public IActionResult SpSignup()
         {
@@ -284,4 +294,3 @@ namespace Helperland.Controllers
         }
     }
 }
-
