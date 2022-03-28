@@ -33,36 +33,84 @@ namespace helperland1._0.Controllers
                 if (_db.Users.Where(x => x.Email == user.username && pass).Count() > 0)
                 {
 
-                     var U = _db.Users.FirstOrDefault(x => x.Email == user.username);
+                    var U = _db.Users.FirstOrDefault(x => x.Email == user.username);
+                    ViewBag.Name = null;
 
-                    Console.WriteLine("1");
 
-                    if (user.remember == true)
-                    {
-                        CookieOptions cookieRemember = new CookieOptions();
-                        cookieRemember.Expires = DateTime.Now.AddSeconds(604800);
-                        Response.Cookies.Append("userId", Convert.ToString(U.UserId), cookieRemember);
-                    }
-                   
 
-                    HttpContext.Session.SetInt32("userId", U.UserId);
 
-                 
+
 
                     if (U.UserTypeId == 0)
                     {
+                        if (U.IsActive == false)
+                        {
+                            ViewBag.Name = null;
+                            TempData["add"] = "alert show";
+                            TempData["fail"] = "You are deactivated by admin, please contact admin.";
+                            return RedirectToAction("Index", "Public", new { loginModal = "true" });
+                        }
+
+                        if (user.remember == true)
+                        {
+                            CookieOptions cookieRemember = new CookieOptions();
+                            cookieRemember.Expires = DateTime.Now.AddSeconds(604800);
+                            Response.Cookies.Append("userId", Convert.ToString(U.UserId), cookieRemember);
+                        }
+
+
+                        HttpContext.Session.SetInt32("userId", U.UserId);
+
+
                         return RedirectToAction("CustomerDashboard", "Customer");
                     }
-                  /* else if (user.UserTypeId == 2)
+                    else if (U.UserTypeId == 1)
                     {
-                        return RedirectToAction("SPUpcomingService", "ServicePro");
-                    }
-                    else if (user.UserTypeId == 3)
-                    {
-                        return RedirectToAction("ServiceRequest", "Admin");
-                    }*/
+                        if (U.IsApproved == false || U.IsActive == false)
+                        {
+                            ViewBag.Name = null;
+                            TempData["add"] = "alert show";
+                            TempData["fail"] = "You are not approved by admin, please contact admin.";
+                            return RedirectToAction("Index", "Public", new { loginModal = "true" });
+                        }
 
-                    return RedirectToAction("CustomerDashboard", "Customer");
+                        if (user.remember == true)
+                        {
+                            CookieOptions cookieRemember = new CookieOptions();
+                            cookieRemember.Expires = DateTime.Now.AddSeconds(604800);
+                            Response.Cookies.Append("userId", Convert.ToString(U.UserId), cookieRemember);
+                        }
+
+
+                        HttpContext.Session.SetInt32("userId", U.UserId);
+
+
+                        return RedirectToAction("SPServiceRequest", "Serviceprovider");
+                    }
+
+                    else if (U.UserTypeId == 2)
+                    {
+                        if (U.IsActive == false)
+                        {
+                            ViewBag.Name = null;
+                            TempData["add"] = "alert show";
+                            TempData["fail"] = "You are deactivated by admin, please contact admin.";
+                            return RedirectToAction("Index", "Public", new { loginModal = "true" });
+                        }
+
+                        if (user.remember == true)
+                        {
+                            CookieOptions cookieRemember = new CookieOptions();
+                            cookieRemember.Expires = DateTime.Now.AddSeconds(604800);
+                            Response.Cookies.Append("userId", Convert.ToString(U.UserId), cookieRemember);
+                        }
+
+
+                        HttpContext.Session.SetInt32("userId", U.UserId);
+
+                        return RedirectToAction("AdminPanel", "Admin");
+                    }
+
                 }
                 else
                 {
@@ -102,6 +150,8 @@ namespace helperland1._0.Controllers
                     user.IsRegisteredUser = true;
                     user.ModifiedBy = 123;
                     user.UserTypeId = 1;
+                    user.IsActive = false;
+                    user.IsApproved = false;
                     user.Password = BCrypt.Net.BCrypt.HashPassword(user.Password);
                     _db.Users.Add(user);
                     _db.SaveChanges();
@@ -145,6 +195,8 @@ namespace helperland1._0.Controllers
                     user.IsRegisteredUser = true;
                     user.ModifiedBy = 123;
                     user.UserTypeId = 0;
+                    user.IsApproved = true;
+                    user.IsActive = true;
                     user.Password = BCrypt.Net.BCrypt.HashPassword(user.Password);
 
                     _db.Users.Add(user);

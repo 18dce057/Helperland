@@ -6928,11 +6928,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Shraddha\\helperland1.0\\helperland1.0\\helperland1.0.csproj",
+      "projectUniqueName": "E:\\Shraddha\\Helperland\\Helperland\\helperland1.0\\helperland1.0\\helperland1.0.csproj",
       "projectName": "helperland1.0",
-      "projectPath": "E:\\Shraddha\\helperland1.0\\helperland1.0\\helperland1.0.csproj",
+      "projectPath": "E:\\Shraddha\\Helperland\\Helperland\\helperland1.0\\helperland1.0\\helperland1.0.csproj",
       "packagesPath": "C:\\Users\\hp\\.nuget\\packages\\",
-      "outputPath": "E:\\Shraddha\\helperland1.0\\helperland1.0\\obj\\",
+      "outputPath": "E:\\Shraddha\\Helperland\\Helperland\\helperland1.0\\helperland1.0\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\hp\\AppData\\Roaming\\NuGet\\NuGet.Config",
