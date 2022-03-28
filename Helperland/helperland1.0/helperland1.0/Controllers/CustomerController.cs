@@ -23,7 +23,6 @@ namespace helperland1._0.Controllers
         {
             _db = db;
         }
-
         public IActionResult CustomerDashboard()
         {
 
